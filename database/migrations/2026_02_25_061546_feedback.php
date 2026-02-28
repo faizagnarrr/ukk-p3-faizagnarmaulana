@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('feedback', function(Blueprint $table){
             $table->id();
-            $table->foreignId('aspirasi_id')->constrained('kategori')->onDelete('cascade');
+            $table->foreignId('aspirasi_id')->constrained('aspirasi')->onDelete('cascade');
             $table->foreignId('admin_id')->constrained('users')->onDelete('cascade');
             $table->text('isi_feedback');
             $table->timestamps();
