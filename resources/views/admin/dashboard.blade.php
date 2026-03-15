@@ -1,29 +1,30 @@
-<h1>Admin Dashboard</h1>
+<title>Dashboard Admin</title>
+<h1>Dashboard Admin</h1>
 <p>Selamat datang, {{ Auth::user()->name }}</p>
 
 <h3>Filter Aspirasi</h3>
 <form method="GET" action="{{ route('admin.dashboard') }}" style="margin-bottom:20px;">
-
+    
     <!-- Filter Tanggal -->
     <label>Tanggal:</label>
     <input type="date" name="tanggal" value="{{ request('tanggal') }}">
-
+    
     <!-- Filter Kategori -->
     <label>Kategori:</label>
     <select name="kategori_id">
         <option value="">-- Semua Kategori --</option>
         @foreach($kategori as $k)
-            <option value="{{ $k->id }}"
-                {{ request('kategori_id') == $k->id ? 'selected' : '' }}>
-                {{ $k->nama_kategori }}
-            </option>
-        @endforeach
-    </select>
+        <option value="{{ $k->id }}"
+        {{ request('kategori_id') == $k->id ? 'selected' : '' }}>
+        {{ $k->nama_kategori }}
+    </option>
+    @endforeach
+</select>
 
     <!-- Search Nama Siswa -->
     <label>Nama Siswa:</label>
     <input type="text" name="nama_siswa"
-           value="{{ request('nama_siswa') }}"
+    value="{{ request('nama_siswa') }}"
            placeholder="Cari nama siswa...">
 
     <button type="submit">Filter</button>
@@ -53,7 +54,7 @@
         <td>{{ $a->status }}</td>
         <td>{{ $a->created_at->format('d-m-Y') }}</td>
         <td>
-            <a href="{{ route('admin.aspirasi.detail', $a->id) }}">Detail / Edit</a>
+            <a href="{{ route('admin.aspirasi.detail', $a->id) }}">Detail</a>
         </td>
     </tr>
     @empty

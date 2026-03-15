@@ -1,3 +1,4 @@
+<title>Tambah Aspirasi</title>
 <h1>Tambah Aspirasi Baru</h1>
 
 <form action="{{ route('siswa.aspirasi.store') }}" method="POST">

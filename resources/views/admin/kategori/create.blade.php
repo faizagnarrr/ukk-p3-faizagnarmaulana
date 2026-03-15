@@ -1,3 +1,4 @@
+<title>Tambah Kategori</title>
 <h1>Tambah Kategori</h1>
 
 <form action="{{ route('kategori.store') }}" method="POST">

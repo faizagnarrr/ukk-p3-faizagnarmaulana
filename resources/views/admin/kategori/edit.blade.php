@@ -1,3 +1,4 @@
+<title>Edit Kategori</title>
 <h1>Edit Kategori</h1>
 
 <form action="{{ route('kategori.update', $kategori->id) }}" method="POST">

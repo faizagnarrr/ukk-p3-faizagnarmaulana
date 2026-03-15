@@ -1,3 +1,4 @@
+<title>Detail Aspirasi</title>
 <h1>Detail Aspirasi</h1>
 
 <h3>{{ $aspirasi->judul }}</h3>

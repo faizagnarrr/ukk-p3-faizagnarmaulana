@@ -1,3 +1,4 @@
+<title>Dashboard Siswa</title>
 <h1>Dashboard Siswa</h1>
 <p>Selamat datang, {{ Auth::user()->name }}</p>
 

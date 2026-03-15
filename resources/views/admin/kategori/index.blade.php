@@ -1,3 +1,4 @@
+<title>Kelola Kategori</title>
 <h1>Kelola Kategori</h1>
 
 <a href="{{ route('kategori.create') }}">Tambah Kategori</a>
