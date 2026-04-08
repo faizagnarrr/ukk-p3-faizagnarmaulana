@@ -2,7 +2,7 @@
 <h1>Detail Aspirasi</h1>
 
 <h3>{{ $aspirasi->judul }}</h3>
-<p><strong>Pengirim:</strong> {{ optional($aspirasi->user)->nama ?? 'User tidak ditemukan' }}</p>
+<p><strong>Pengirim:</strong> {{ optional($aspirasi->user)->name ?? 'User tidak ditemukan' }}</p>
 <p><strong>Kategori:</strong> {{ optional($aspirasi->kategori)->nama_kategori ?? 'Kategori tidak ditemukan' }}</p>
 <p><strong>Isi:</strong> {{ $aspirasi->isi }}</p>
 <p><strong>Status:</strong> {{ ucfirst($aspirasi->status) }}</p>

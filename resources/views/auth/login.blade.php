@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Login Pengaduan Sarana</title>
-</head>
-<body>
-    <h2>Login</h2>
-
-    @if($errors->any())
+    <head>
+        <title>Login Pengaduan Sarana</title>
+    </head>
+    <body>
+        @extends('layouts.app')
+        <h2>Login</h2>
+        
+        @if($errors->any())
         <div style="color:red">{{ $errors->first() }}</div>
-    @endif
-
+        @endif
+        
     <form method="POST" action="/login">
         @csrf
         <label>Email:</label>
